@@ -1,9 +1,9 @@
-<x-scroll-section data-bg="bg-pink" class="relative flex h-screen items-center text-white">
+<x-scroll-section data-bg="bg-pink" class="relative flex h-screen w-screen items-center overflow-x-hidden text-white">
     <div class="container">
         <h2 class="mb-8 flex flex-wrap text-4xl font-bold lg:text-5xl">
             @foreach (explode('###', wordwrap('We are standing up for Leeds’ community venues', 12, '###')) as $key => $word)
                 <div class="@if ($loop->iteration == $loop->count - 1 || $loop->last) basis-full md:basis-auto @else basis-full @endif"">
-                    <span class="bg-blue mb-2 inline-block px-1 text-white">{{ $word }}</span>
+                    <span class="mb-2 inline-block bg-blue px-1 text-white">{{ $word }}</span>
                 </div>
             @endforeach
         </h2>
@@ -16,7 +16,7 @@
 
     <div class="absolute -top-12 right-0 w-1/3 md:top-1/3 md:translate-x-1/3 lg:w-1/2">
 
-        <svg class="animate-spin-slow h-auto w-[50vw] origin-center" xmlns="http://www.w3.org/2000/svg" width="734.18"
+        <svg class="h-auto w-[50vw] origin-center animate-spin-slow" xmlns="http://www.w3.org/2000/svg" width="734.18"
             height="742.58" viewBox="0 0 734.18 742.58">
             <path class="transition-all delay-500 duration-1000"
                 :class="{
