@@ -2,7 +2,7 @@
 
 @section('content')
     <div x-data="{ currentSection: null, backgroundColor: 'bg-pink' }" @newsection="currentSection = $event.detail.id, backgroundColor = $event.detail.color"
-        :class="backgroundColor" class="transition duration-1000">
+        :class="backgroundColor" class="transition duration-1000" class="overflow-hidden">
 
         @include('blocks.home-hero')
         @include('blocks.home-about')

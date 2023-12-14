@@ -1,4 +1,4 @@
-<x-scroll-section data-bg="bg-pink" class="relative flex h-screen w-screen items-center overflow-x-hidden text-white">
+<x-scroll-section data-bg="bg-pink" class="relative flex h-screen w-screen items-center text-white">
     <div class="container">
         <h2 class="mb-8 flex flex-wrap text-4xl font-bold lg:text-5xl">
             @foreach (explode('###', wordwrap('We are standing up for Leeds’ community venues', 12, '###')) as $key => $word)
