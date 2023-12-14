@@ -1,0 +1,20 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-f3133889.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/fonts/Mohr.woff2": {
+    "file": "assets/Mohr-22178f01.woff2",
+    "src": "resources/fonts/Mohr.woff2"
+  },
+  "resources/fonts/Semi-Mono-Bold.woff2": {
+    "file": "assets/Semi-Mono-Bold-0fbb4d92.woff2",
+    "src": "resources/fonts/Semi-Mono-Bold.woff2"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-2d17bdb4.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  }
+}
