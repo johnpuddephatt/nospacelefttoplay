@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "ABC";
+    src: url("../fonts/Semi-Mono-Bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Mohr";
+    src: url("../fonts/Mohr.woff2") format("woff2");
+}
