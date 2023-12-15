@@ -5,10 +5,12 @@ namespace App\Livewire;
 use App\Models\Memory;
 use App\Models\User;
 use App\Notifications\MemoryCreated;
+use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
 use Illuminate\Support\Str;
 use Livewire\WithFileUploads;
 use Livewire\Attributes\Validate;
+use Spatie\Image\Manipulations;
 
 class CreateMemory extends Component
 {
@@ -39,10 +41,18 @@ class CreateMemory extends Component
             ]
         );
 
+        if ($this->image) {
+            $image = $this->image->store('memories', 'public');
+            $resized_image_path = $image . '-800.jpg';
+            $resized_image = \Spatie\Image\Image::load(Storage::disk('public')->path($image))->format(Manipulations::FORMAT_JPG)
+                ->width(800)
+                ->save(Storage::disk('public')->path($resized_image_path));
+        }
+
         $memory = $user->memories()->create(
             [
                 'text' => $this->text,
-                'image' => $this->image ? $this->image->store('memories', 'public') : null,
+                'image' => $resized_image_path ?? null,
             ]
         );
 
