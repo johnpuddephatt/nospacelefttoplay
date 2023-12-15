@@ -49,7 +49,7 @@ class MemoryResource extends Resource
 
                     ->sortable(),
                 Tables\Columns\CheckboxColumn::make('published')
-                    ->boolean()
+
 
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
