@@ -17,7 +17,7 @@
         @foreach ($memories as $memory)
             <div x-data="{ shownOnce: false }" x-intersect.once="shownOnce = true"
                 :class="{ 'opacity-0  scale-90 rotate-12': !shownOnce }"
-                class="{{ $memory->image && strlen($memory->text) > 200 ? 'md:col-span-2 md:flex md:flex-row gap-6' : 'aspect-[0.8]' }} random-delay overflow-hidden border-4 border-pink bg-white transition duration-500">
+                class="{{ $memory->image && strlen($memory->text) > 200 ? 'md:col-span-2 flex-col md:flex-row gap-6' : 'flex-col aspect-[0.8]' }} random-delay flex overflow-hidden border-4 border-pink bg-white transition duration-500">
                 @if ($memory->image)
                     <img src="{{ Storage::url($memory->image) }}" alt="{{ $memory->name }}"
                         class="{{ strlen($memory->text) > 200 ? 'w-full md:w-1/2 aspect-video md:aspect-[0.8]' : 'w-full aspect-video' }} h-auto object-cover">
