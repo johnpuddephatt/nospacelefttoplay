@@ -22,10 +22,10 @@
 
                  <div class="relative">
                      <input type="text" wire:model.blur="name" id="name" name="name"
-                         class="focus:border-blue-600 dark:focus:border-blue-500 peer block w-full appearance-none !rounded-none border-0 bg-gray-50 px-2.5 pb-2.5 pt-5 text-gray-900 focus:outline-none focus:ring-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+                         class="focus:border-blue-600 peer block w-full appearance-none !rounded-none border-0 bg-gray-50 px-2.5 pb-2.5 pt-5 text-gray-900 focus:outline-none focus:ring-0"
                          placeholder=" " />
                      <label for="name"
-                         class="peer-focus:text-blue-600 peer-focus:dark:text-blue-500 absolute start-2.5 top-4 z-10 origin-[0] -translate-y-4 scale-75 transform text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-4 peer-focus:scale-75 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4 dark:text-gray-400">Your
+                         class="peer-focus:text-blue-600 absolute start-2.5 top-4 z-10 origin-[0] -translate-y-4 scale-75 transform text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-4 peer-focus:scale-75 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4">Your
                          name</label>
 
                      @error('name')
@@ -36,10 +36,10 @@
 
                  <div class="relative">
                      <input type="text" id="email" name="email" wire:model.blur="email"
-                         class="focus:border-blue-600 dark:focus:border-blue-500 peer block w-full appearance-none !rounded-none border-0 bg-gray-50 px-2.5 pb-2.5 pt-5 text-gray-900 focus:outline-none focus:ring-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+                         class="focus:border-blue-600 peer block w-full appearance-none !rounded-none border-0 bg-gray-50 px-2.5 pb-2.5 pt-5 text-gray-900 focus:outline-none focus:ring-0"
                          placeholder=" " />
                      <label for="email"
-                         class="peer-focus:text-blue-600 peer-focus:dark:text-blue-500 absolute start-2.5 top-4 z-10 origin-[0] -translate-y-4 scale-75 transform text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-4 peer-focus:scale-75 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4 dark:text-gray-400">Your
+                         class="peer-focus:text-blue-600 absolute start-2.5 top-4 z-10 origin-[0] -translate-y-4 scale-75 transform text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-4 peer-focus:scale-75 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4">Your
                          email</label>
 
                      @error('email')
@@ -51,10 +51,10 @@
 
              <div class="relative">
                  <textarea rows="4" id="text" name="text" wire:model="text"
-                     class="focus:border-blue-600 dark:focus:border-blue-500 peer block w-full appearance-none !rounded-none border-0 bg-gray-50 px-2.5 pb-2.5 pt-5 text-gray-900 focus:outline-none focus:ring-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+                     class="focus:border-blue-600 peer block w-full appearance-none !rounded-none border-0 bg-gray-50 px-2.5 pb-2.5 pt-5 text-gray-900 focus:outline-none focus:ring-0"
                      placeholder=" "></textarea>
                  <label for="text"
-                     class="peer-focus:text-blue-600 peer-focus:dark:text-blue-500 absolute start-2.5 top-4 z-10 origin-[0] -translate-y-4 scale-75 transform text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-4 peer-focus:scale-75 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4 dark:text-gray-400">Your
+                     class="peer-focus:text-blue-600 absolute start-2.5 top-4 z-10 origin-[0] -translate-y-4 scale-75 transform text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-4 peer-focus:scale-75 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4">Your
                      memory</label>
                  @error('text')
                      <x-error class="error">{{ $message }}</x-error>
