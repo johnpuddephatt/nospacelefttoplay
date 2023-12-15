@@ -10,7 +10,7 @@
             x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-300"
             x-transition:leave-start="opacity-100 transform scale-100"
             x-transition:leave-end="opacity-0 transform scale-90"
-            class="pointer-events-auto w-full max-w-sm rounded-lg border-4 border-pink bg-blue shadow-xl">
+            class="pointer-events-auto w-full max-w-sm rounded-lg border-4 border-pink bg-white shadow-xl">
             <div class="shadow-xs overflow-hidden rounded-lg">
                 <div class="p-4">
                     <div class="flex items-start">
@@ -23,7 +23,7 @@
 
                         </div>
                         <div class="ml-3 w-0 flex-1 pt-0.5">
-                            <p class="text-sm font-medium leading-5 text-white">
+                            <p class="text-sm font-medium leading-5 text-black">
                                 {{ session('status') }}
                             </p>
                         </div>
