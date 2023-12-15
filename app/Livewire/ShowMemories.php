@@ -16,7 +16,7 @@ class ShowMemories extends Component
     public function render()
     {
         return view('livewire.show-memories', [
-            'memories' => Memory::with('user')->latest()->simplePaginate(10)
+            'memories' => Memory::verified()->published()->with('user')->latest()->simplePaginate(10)
         ]);
     }
 }

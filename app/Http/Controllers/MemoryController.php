@@ -12,9 +12,9 @@ class MemoryController extends Controller
 
 
 
-    public function verify($memory, $hash)
+    public function verify(Memory $memory, $hash)
     {
-        $memory = Memory::withoutGlobalScopes()->find($memory);
+
         if (Hashids::decode($hash)[0] == $memory->id) {
             $memory->update(['verified' => true]);
             return redirect('/')

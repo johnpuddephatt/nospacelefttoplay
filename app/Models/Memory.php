@@ -18,15 +18,15 @@ class Memory extends Model
     ];
 
     // add default scopes in booted method
-    public static function booted()
-    {
-        static::addGlobalScope('verified', function (Builder $builder) {
-            $builder->where('verified', true);
-        });
 
-        static::addGlobalScope('published', function (Builder $builder) {
-            $builder->where('published', true);
-        });
+    public function scopeVerified(Builder $query)
+    {
+        return $query->where('verified', true);
+    }
+
+    public function scopePublished(Builder $query)
+    {
+        return $query->where('published', true);
     }
 
     public function user()
