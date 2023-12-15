@@ -24,7 +24,7 @@
                 @endif
                 <div
                     class="@if ($memory->image) ml-[4px] w-full @endif flex aspect-[0.8] flex-col justify-between p-8 pt-12">
-                    <p class="text-lg">{{ $memory->text }}</p>
+                    <p class="2xl:text-lg">{{ $memory->text }}</p>
                     <div class="flex flex-row items-end justify-between">
                         <h3 class="text font-bold">{{ $memory->user->name }}</h3>
                         <div class="text-right text-gray-500">{{ $memory->created_at->diffForHumans() }}</div>
