@@ -8,9 +8,14 @@
             @endforeach
         </h2>
 
-        <p class="max-w-md text-2xl">
-            We want to bring people together from across Leeds to help secure a sustainable future for creativity and
-            community in our city.
+        <p class="mb-4 max-w-2xl text-xl 2xl:text-2xl">
+            Our love for community venues runs deep. We want a sustainable future for creativity
+            and community in Leeds and we’re inviting people to come together to help make that happen.
+        </p>
+        <p class="ticker-bold max-w-2xl text-xl 2xl:text-2xl">
+            No Space Left to Play is a platform for <strong>reflection on</strong>, <strong>discussion around</strong>
+            and <strong>action to change</strong> the trajectory
+            of development in our city so that our creative and community spaces thrive.
         </p>
     </div>
 
