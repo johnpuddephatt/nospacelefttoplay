@@ -1,6 +1,6 @@
-<x-scroll-section data-bg="bg-blue" class="flex h-screen items-end text-white md:items-center">
+<x-scroll-section data-bg="bg-blue" class="flex h-screen w-screen items-end text-white md:items-center">
     <div class="container py-4">
-        <h1 class="2xl:text-10xl font-serif text-7xl uppercase !leading-[0.85] lg:text-9xl">
+        <h1 class="font-serif text-7xl uppercase !leading-[0.85] lg:text-9xl 2xl:text-10xl">
             @foreach (['No', '_Space', 'Left', 'To', 'Play'] as $key => $word)
                 <div class="dynamic-delay {{ $key == 2 ? 'mt-4' : null }} {{ $key > 1 ? 'text-pink' : null }} translate-x-[-50vw] opacity-0 transition duration-1000"
                     :class="{
@@ -14,7 +14,7 @@
     </div>
 
     <svg xmlns="http://www.w3.org/2000/svg" width="966.26" height="1578.57" viewBox="0 0 966.26 1578.57"
-        class="text-pink absolute -top-12 right-0 h-auto w-3/4 -rotate-45 transition md:left-1/2 md:right-auto md:w-[50vw] md:rotate-0">
+        class="absolute -top-12 right-0 h-auto w-3/4 -rotate-45 text-pink transition md:left-1/2 md:right-auto md:w-[50vw] md:rotate-0">
         <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="63"
             stroke-dasharray="3700" stroke-dashoffset="-3700"
             class="delay-750 transition-all duration-1000 ease-linear md:duration-[1500ms]"
