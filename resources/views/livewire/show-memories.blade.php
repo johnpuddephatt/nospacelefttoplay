@@ -20,7 +20,7 @@
                 class="{{ $memory->image && strlen($memory->text) > 200 ? 'md:col-span-2 md:flex md:flex-row gap-6' : 'aspect-[0.8]' }} random-delay overflow-hidden border-4 border-pink bg-white transition duration-500">
                 @if ($memory->image)
                     <img src="{{ Storage::url($memory->image) }}" alt="{{ $memory->name }}"
-                        class="{{ strlen($memory->text) > 200 ? 'w-full md:w-1/2' : 'w-full' }} h-auto object-cover">
+                        class="{{ strlen($memory->text) > 200 ? 'w-full md:w-1/2 aspect-video md:aspect-[0.8]' : 'w-full aspect-video' }} h-auto object-cover">
                 @endif
                 <div
                     class="@if ($memory->image) ml-[4px] w-full @endif flex aspect-[0.8] flex-col justify-between p-8 pt-12">
