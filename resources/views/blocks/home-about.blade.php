@@ -9,7 +9,7 @@
         </h2>
 
         <p class="mb-5 max-w-3xl text-xl 2xl:text-2xl">
-            Our love for community venues runs deep. We want a sustainable future for creativity
+            We want a sustainable future for creativity
             and community in Leeds and we’re inviting people to come together to help make that happen.
         </p>
         <p class="ticker-bold max-w-3xl text-xl 2xl:text-2xl">
