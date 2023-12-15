@@ -1,5 +1,5 @@
-<x-scroll-section data-bg="bg-pink" class="relative flex h-screen w-screen items-center text-white">
-    <div class="container">
+<x-scroll-section data-bg="bg-pink" class="relative flex min-h-screen w-screen items-center text-white">
+    <div class="container py-16">
         <h2 class="mb-8 flex flex-wrap text-4xl font-bold lg:text-5xl">
             @foreach (explode('###', wordwrap('We are standing up for Leeds’ community venues', 12, '###')) as $key => $word)
                 <div class="@if ($loop->iteration == $loop->count - 1 || $loop->last) basis-full md:basis-auto @else basis-full @endif"">
@@ -8,11 +8,11 @@
             @endforeach
         </h2>
 
-        <p class="mb-4 max-w-2xl text-xl 2xl:text-2xl">
+        <p class="mb-5 max-w-3xl text-xl 2xl:text-2xl">
             Our love for community venues runs deep. We want a sustainable future for creativity
             and community in Leeds and we’re inviting people to come together to help make that happen.
         </p>
-        <p class="ticker-bold max-w-2xl text-xl 2xl:text-2xl">
+        <p class="ticker-bold max-w-3xl text-xl 2xl:text-2xl">
             No Space Left to Play is a platform for <strong>reflection on</strong>, <strong>discussion around</strong>
             and <strong>action to change</strong> the trajectory
             of development in our city so that our creative and community spaces thrive.
