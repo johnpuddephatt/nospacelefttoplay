@@ -13,7 +13,7 @@
             {{ $memories->links(data: ['scrollTo' => 'paginated-memories']) }}
         </div>
     </div>
-    <div id="paginated-memories" class="mt-5 grid grid-flow-dense gap-8 md:grid-cols-2 lg:grid-cols-3 xl:gap-12">
+    <div id="paginated-memories" class="mt-5 grid grid-flow-dense gap-8 md:grid-cols-2 xl:grid-cols-3 xl:gap-12">
         @foreach ($memories as $memory)
             <div x-data="{ shownOnce: false }" x-intersect.once="shownOnce = true"
                 :class="{ 'opacity-0  scale-90 rotate-12': !shownOnce }"
