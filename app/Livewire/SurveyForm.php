@@ -13,6 +13,7 @@ class SurveyForm extends Component
     public function render()
     {
         $survey = Survey::find($this->id);
+        if (!$survey) abort(404);
         return view('livewire.survey-form', compact('survey'));
     }
 }
