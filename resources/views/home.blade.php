@@ -7,5 +7,7 @@
         @include('blocks.home-hero')
         @include('blocks.home-about')
         @include('blocks.home-memories')
+
+        <livewire:survey-form id="1" />
     </div>
 @endsection

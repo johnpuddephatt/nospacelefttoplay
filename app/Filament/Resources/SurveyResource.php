@@ -4,18 +4,24 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\SurveyResource\Pages;
 use App\Filament\Resources\SurveyResource\RelationManagers;
+use Faker\Core\Number;
 use MattDaneshvar\Survey\Models\Survey;
 
 use Filament\Forms;
+use Filament\Forms\Components\Checkbox;
+use Filament\Forms\Components\CheckboxList;
+use Filament\Forms\Components\KeyValue;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
+use Filament\Forms\Get;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Arr;
 
 class SurveyResource extends Resource
 {
@@ -29,6 +35,18 @@ class SurveyResource extends Resource
             ->schema([
                 TextInput::make('name')
                     ->autofocus(),
+                Checkbox::make('settings.accept-guest-entries')
+                    ->label('Accept guest entries'),
+                TextInput::make('settings.max-entries-per-user')
+                    ->type('number')
+                    ->label('Max entries per user')
+
+                    ->minValue(-1)
+                    ->maxValue(100)
+
+                    ->step(1)
+                    ->default(1),
+
                 Repeater::make('questions')
                     ->relationship()
                     ->schema([
@@ -38,8 +56,14 @@ class SurveyResource extends Resource
                             'number' => 'Number',
                             'radio' => 'Radio',
                             'multiselect' => 'Checkbox',
-                        ])
-                    ])
+                        ])->live(),
+                        Repeater::make('options')
+                            ->simple(TextInput::make('option'),)
+                            ->dehydrateStateUsing(fn (array $state) => implode(Arr::pluck(array_values($state), 'option')), ',')
+                            ->hidden(fn (Get $get): bool => in_array($get('type'), [null, 'text', 'number']))
+                        // ->hidden(fn (Get $get): bool => dd($get('type')))
+                    ]),
+
 
             ]);
     }
