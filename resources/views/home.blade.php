@@ -4,7 +4,6 @@
     <div x-data="{ currentSection: null, backgroundColor: 'bg-pink' }" @newsection="currentSection = $event.detail.id, backgroundColor = $event.detail.color"
         :class="backgroundColor" class="overflow-hidden transition duration-1000">
 
-        <livewire:survey-form id="1" />
 
         @include('blocks.home-hero')
         @include('blocks.home-about')
