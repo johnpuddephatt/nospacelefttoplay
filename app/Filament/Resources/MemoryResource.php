@@ -34,9 +34,8 @@ class MemoryResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('text')
-
                     ->searchable()
-                    ->sortable(),
+                    ->sortable()->limit(25),
                 Tables\Columns\TextColumn::make('user.name')
                     ->searchable()
                     ->sortable(),
@@ -49,7 +48,7 @@ class MemoryResource extends Resource
                     ->boolean()
 
                     ->sortable(),
-                Tables\Columns\IconColumn::make('published')
+                Tables\Columns\CheckboxColumn::make('published')
                     ->boolean()
 
                     ->sortable(),
