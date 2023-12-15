@@ -20,7 +20,7 @@ class CreateMemory extends Component
     #[Validate('required|email')]
     public $email = '';
 
-    #[Validate('required')]
+    #[Validate('required:max:500')]
     public $text = '';
 
     public $image = null;

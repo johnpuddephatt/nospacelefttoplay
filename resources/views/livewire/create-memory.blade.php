@@ -55,7 +55,7 @@
                      <div class="relative" x-data="{ content: '', limit: $refs.message.maxLength, focused: false }">
 
                          <textarea @focus="focused = true" @blur="focused = false" x-ref="message" x-model="content" maxlength="500"
-                             rows="5" id="text" name="text" wire:model="text"
+                             rows="6" id="text" name="text" wire:model="text"
                              class="focus:border-blue-600 peer block w-full appearance-none !rounded-none border-0 bg-gray-50 px-2.5 pb-2.5 pt-6 text-gray-900 focus:outline-none focus:ring-0"
                              placeholder=" "></textarea>
                          <label for="text"
