@@ -15,6 +15,7 @@
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.3",
+        "matt-daneshvar/laravel-survey": "^0.3.0",
         "vinkla/hashids": "^11.0"
     },
     "require-dev": {
