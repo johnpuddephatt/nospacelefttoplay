@@ -1,6 +1,6 @@
 <div>
     <div class="flex gap-2">
-        <h2 class="text-4xl text-white">Memories</h2>
+        <h2 class="mb-4 mt-8 text-4xl text-white">Memories</h2>
         <svg wire:loading class="ml-2 inline-block h-10 w-10 animate-spin text-white" xmlns="http://www.w3.org/2000/svg"
             fill="none" viewBox="0 0 24 24">
             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
@@ -24,7 +24,7 @@
                 @endif
                 <div
                     class="@if ($memory->image) ml-[4px] w-full @endif flex aspect-[0.8] flex-col justify-between p-8 pt-12">
-                    <p class="2xl:text-lg">{{ $memory->text }}</p>
+                    <p class="leading-tight 2xl:text-lg">{{ $memory->text }}</p>
                     <div class="flex flex-row items-end justify-between">
                         <h3 class="text font-bold">{{ $memory->user->name }}</h3>
                         <div class="text-right text-gray-500">{{ $memory->created_at->diffForHumans() }}</div>
