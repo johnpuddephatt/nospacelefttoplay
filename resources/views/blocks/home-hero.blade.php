@@ -1,4 +1,4 @@
-<x-scroll-section data-bg="bg-blue" class="flex h-screen w-screen items-end text-white md:items-center">
+<x-scroll-section data-bg="bg-blue" class="relative flex h-screen w-screen items-end text-white md:items-center">
     <div class="container py-4">
         <h1 class="font-serif text-7xl uppercase !leading-[0.85] lg:text-9xl 2xl:text-10xl">
             @foreach (['No', '_Space', 'Left', 'To', 'Play'] as $key => $word)
