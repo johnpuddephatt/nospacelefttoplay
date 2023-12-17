@@ -23,7 +23,7 @@
                         class="{{ strlen($memory->text) > 200 ? 'w-full md:w-1/2 aspect-video md:aspect-[0.8]' : 'w-full aspect-video' }} h-auto object-cover">
                 @endif
                 <div
-                    class="@if ($memory->image) ml-[4px] w-full aspect-[0.8] @else @endif flex flex-grow flex-col justify-between p-8 pt-12">
+                    class="@if ($memory->image) ml-[4px] w-full aspect-[0.8] @else @endif flex flex-grow flex-col justify-between p-4 pt-6 sm:p-8 sm:pt-12">
                     <p class="leading-tight 2xl:text-lg">{{ $memory->text }}</p>
                     <div class="mt-4 flex flex-row items-end justify-between">
                         <h3 class="text font-bold">{{ $memory->user->name }}</h3>
