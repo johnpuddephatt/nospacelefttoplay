@@ -5,8 +5,11 @@
                 style="word-spacing: 999px">
                 Share your memories
             </h2>
-            <div class="mb-12 inline-block bg-pink p-2 text-lg text-white lg:text-3xl">What do Leeds’ community venues
-                mean to you?
+            <div class="mb-12">
+                <div class="inline bg-pink p-2 text-lg leading-[2.5] text-white lg:text-3xl">What do Leeds’ community
+                    venues
+                    mean to you?
+                </div>
             </div>
             <p class="mb-5 text-xl text-white 2xl:text-2xl">
 

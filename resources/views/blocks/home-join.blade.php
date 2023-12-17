@@ -1,9 +1,11 @@
-<div class="bg-pink py-24 text-center text-white">
+<x-scroll-section data-bg="bg-pink" class="py-24 text-center text-white">
+
     <div class="container">
-        <h3 class="mb-8 font-serif text-6xl uppercase leading-[0.85] md:text-7xl lg:text-8xl">Join the
+        <h3 class="mb-8 font-serif text-5xl uppercase leading-[0.85] md:text-7xl lg:text-8xl">Join the
             movement</h3>
 
         <p class="mx-auto mb-16 max-w-3xl text-xl 2xl:text-2xl">
+
             Be part of the conversation by filling in our form and signing up to our mailing list for ways to get
             involved, campaign news and events</p>
 
@@ -20,4 +22,4 @@
             </span>
         </a>
     </div>
-</div>
+</x-scroll-section>
