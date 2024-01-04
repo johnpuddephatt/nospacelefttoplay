@@ -66,9 +66,9 @@ class MemoryResource extends Resource
                     ->searchable()
                     ->sortable()->limit(10),
                 Tables\Columns\ImageColumn::make('image'),
-                Tables\Columns\CheckboxColumn::make('verified')
+                Tables\Columns\ToggleColumn::make('verified')
                     ->sortable(),
-                Tables\Columns\CheckboxColumn::make('published')
+                Tables\Columns\ToggleColumn::make('published')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->date('F j, Y')
