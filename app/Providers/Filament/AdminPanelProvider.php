@@ -30,6 +30,8 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->passwordReset()
+            ->sidebarWidth('16rem')
+
             ->colors([
                 'primary' => Color::Fuchsia,
 

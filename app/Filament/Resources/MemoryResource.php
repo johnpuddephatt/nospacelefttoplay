@@ -9,6 +9,7 @@ use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Forms\Components;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -25,7 +26,28 @@ class MemoryResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Components\Toggle::make('verified'),
+                Components\Toggle::make('published'),
+                Components\Textarea::make('text')->columnSpan(2),
+
+
+
+                Components\FileUpload::make('image')->columnSpan(2),
+                Components\DateTimePicker::make('created_at')->columnSpan(2),
+
+                Components\Section::make('User')
+                    ->compact()
+                    ->schema([
+                        Components\Select::make('client_id')->label('Name')
+                            ->relationship('user', 'name'),
+                        Components\Select::make('client_id')->label('Email')
+                            ->relationship('user', 'email'),
+                    ]),
+
+
+
+
+
             ]);
     }
 
@@ -33,24 +55,20 @@ class MemoryResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('text')
-                    ->searchable()
-                    ->sortable()->limit(25),
+
                 Tables\Columns\TextColumn::make('user.name')
                     ->searchable()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('user.email')
                     ->searchable()
                     ->sortable(),
+                Tables\Columns\TextColumn::make('text')
+                    ->searchable()
+                    ->sortable()->limit(10),
                 Tables\Columns\ImageColumn::make('image'),
-
-                Tables\Columns\IconColumn::make('verified')
-                    ->boolean()
-
+                Tables\Columns\CheckboxColumn::make('verified')
                     ->sortable(),
                 Tables\Columns\CheckboxColumn::make('published')
-
-
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->date('F j, Y')
@@ -62,7 +80,8 @@ class MemoryResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                // Tables\Actions\EditAction::make(),
+                Tables\Actions\ViewAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
@@ -76,6 +95,7 @@ class MemoryResource extends Resource
     {
         return [
             'index' => Pages\ManageMemories::route('/'),
+
         ];
     }
 }
