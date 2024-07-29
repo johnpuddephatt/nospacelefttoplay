@@ -6,12 +6,12 @@
 
         <p class="mx-auto mb-16 max-w-3xl text-xl 2xl:text-2xl">
 
-            Be part of the conversation by filling in our form and signing up to our mailing list for ways to get
+            Be part of the conversation by signing up to our mailing list for ways to get
             involved, campaign news and events</p>
 
         <a target="_blank" class="inline-flex flex-row bg-white text-xl text-black 2xl:text-2xl"
-            href="https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAWUPEb1URUwxWEwwTE5WVzYyN1o5SktGS1Y4N1RKOC4u">
-            <span class="inline-block p-6">Take me to the form</span>
+            href="http://eepurl.com/iFWkrY">
+            <span class="inline-block p-6">Sign me up</span>
 
             <span class="inline-block border-l-4 border-pink p-4">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"

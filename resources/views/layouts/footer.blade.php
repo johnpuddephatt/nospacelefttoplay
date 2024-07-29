@@ -1,12 +1,12 @@
 <footer class="bg-blue pb-10 pt-12 text-white">
     <div class="container flex flex-col justify-between md:flex-row">
-        <h3 class="font-serif text-4xl uppercase !leading-[0.85]">
+        <a href="/" class="font-serif text-4xl uppercase !leading-[0.85]">
             @foreach (['No', '_Space', 'Left', 'To', 'Play'] as $key => $word)
                 <div class="{{ $key == 2 ? 'mt-2' : null }} {{ $key > 1 ? 'text-pink' : null }}">
                     {{ $word }}
                 </div>
             @endforeach
-        </h3>
+        </a>
 
         <div class="self-end text-blue">
             <a class="inline-block rounded-full bg-white p-2" aria-label="No Space Left To Play on Instagram"

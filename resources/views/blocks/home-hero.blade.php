@@ -1,5 +1,13 @@
 <x-scroll-section data-bg="bg-blue" class="relative flex h-screen w-screen items-end text-white md:items-center">
-    <a class="absolute right-4 top-4 z-10 bg-white p-4 text-black" href="#section-5">Join the movement</a>
+    <div class="absolute left-0 top-0 z-20 h-full w-full">
+        @include('partials.navbar', [
+            'show_logo' => false,
+            'bg' => 'bg-white',
+            'border' => 'border-white',
+            'text' => 'text-white',
+        ])
+    </div>
+
     <div class="container py-4">
         <h1 class="font-serif text-7xl uppercase !leading-[0.85] lg:text-9xl 2xl:text-10xl">
             @foreach (['No', '_Space', 'Left', 'To', 'Play'] as $key => $word)

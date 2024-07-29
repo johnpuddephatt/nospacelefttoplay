@@ -16,7 +16,7 @@
 
 </head>
 
-<body class="overflow-x-hidden antialiased">
+<body class="{{ $body_class ?? null }} overflow-x-hidden antialiased">
 
     @if (Route::has('login'))
         <div class="z-10 p-6 text-right sm:fixed sm:right-0 sm:top-0">

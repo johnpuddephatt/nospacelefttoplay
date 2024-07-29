@@ -1,0 +1,21 @@
+.prose {
+    color: #333;
+    font-size: 1.125rem;
+    line-height: 1.75;
+}
+
+.prose h3 {
+    @apply text-xl text-green max-w-lg;
+}
+
+.prose h2 {
+    @apply mt-8 mb-4 inline-block bg-pink px-2 text-lg leading-[2.5] text-white lg:text-3xl;
+}
+
+.prose ul {
+    @apply list-disc pl-4;
+}
+
+.prose figcaption {
+    @apply mt-4 text-green text-center italic;
+}

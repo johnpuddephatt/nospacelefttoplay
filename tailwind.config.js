@@ -21,6 +21,7 @@ export default {
                 green: "#015a2a",
                 white: "#ffffff",
                 black: "#000000",
+                gray: "#F8F6F8",
             },
             fontSize: {
                 "8xl": "6rem",

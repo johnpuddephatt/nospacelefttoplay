@@ -17,3 +17,4 @@ Route::get('/', \App\Http\Controllers\HomeController::class)->name('home');
 
 Route::post('memories', [\App\Http\Controllers\MemoryController::class, 'store'])->name('memory.store');
 Route::get('memories/{memory}/verify/{hash}', [\App\Http\Controllers\MemoryController::class, 'verify'])->name('memory.verify');
+Route::get('{page:slug}', [\App\Http\Controllers\PageController::class, 'show'])->name('page.show');

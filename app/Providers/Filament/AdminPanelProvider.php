@@ -19,6 +19,7 @@ use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Filament\SpatieLaravelTranslatablePlugin;
 use Tapp\FilamentSurvey\FilamentSurveyPlugin;
+use Tobiasla78\FilamentSimplePages\FilamentSimplePagesPlugin;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -41,6 +42,10 @@ class AdminPanelProvider extends PanelProvider
             ->pages([
                 Pages\Dashboard::class,
             ])
+            ->plugin(
+                FilamentSimplePagesPlugin::make()
+                    ->prefixSlug('page') // (optional) sets the page url to yourPanelUrl/page/yourPageSlug
+            )
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
                 Widgets\AccountWidget::class,
