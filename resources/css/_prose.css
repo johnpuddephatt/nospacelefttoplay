@@ -9,7 +9,7 @@
 }
 
 .prose h2 {
-    @apply mt-8 mb-4 inline-block bg-pink px-2 text-lg leading-[2.5] text-white lg:text-3xl;
+    @apply mt-12 mb-4 inline-block bg-pink px-2 text-lg leading-[2.5] text-white lg:text-3xl;
 }
 
 .prose ul {
