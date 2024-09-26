@@ -11,6 +11,6 @@
      @endif
      <a class="{{ $border ?? 'border-white' }} {{ $text ?? 'text-black' }} z-10 ml-auto inline-block border p-4"
          href="/about">About us</a>
-     <a class="{{ $bg ?? 'bg-white' }} {{ isset($bg) && $bg == 'bg-white' ? 'text-black' : 'text-white' }} z-10 inline-block p-4"
+     <a class="{{ $bg ?? 'bg-white' }} {{ isset($bg) && $bg == 'bg-white' ? 'text-black border-white' : 'border-black text-white' }} z-10 inline-block border p-4"
          href="/#section-5">Join the movement</a>
  </div>

@@ -19,3 +19,8 @@
 .prose figcaption {
     @apply mt-4 text-green text-center italic;
 }
+
+.prose .full-width {
+    width: 100vw;
+    margin-left: calc((-100vw + 54rem) / 2);
+}

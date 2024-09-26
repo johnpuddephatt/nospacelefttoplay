@@ -15,6 +15,7 @@ class PageController extends Controller
      */
     public function show(SimplePage $page)
     {
+        $page->content = str_replace('[map]', view('components.map')->render(), $page->content);
         return view('page', compact('page'));
     }
 }
