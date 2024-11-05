@@ -21,6 +21,13 @@
 }
 
 .prose .full-width {
-    width: 100vw;
-    margin-left: calc((-100vw + 54rem) / 2);
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+}
+@media screen and (min-width: 900px) {
+    .prose .full-width {
+        width: 100vw;
+        margin-right: 0;
+        margin-left: calc((-100vw + 54rem) / 2);
+    }
 }
