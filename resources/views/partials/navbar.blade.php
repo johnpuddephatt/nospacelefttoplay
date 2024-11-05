@@ -10,21 +10,25 @@
          </a>
      @endif
 
-     <div class="flex flex-col gap-2 lg:flex-row">
-         <a class="{{ $border ?? 'border-white' }} {{ $text ?? 'text-black' }} z-10 inline-block border p-4"
-             href="/map">
-             <span class="hidden lg:inline">Lost spaces map</span>
-             <span class="lg:hidden">Map</span>
-         </a>
-         <a class="{{ $border ?? 'border-white' }} {{ $text ?? 'text-black' }} z-10 inline-block border p-4"
-             href="/about">
-             <span class="hidden lg:inline">About us</span>
-             <span class="lg:hidden">About</span>
-         </a>
-         <a class="{{ $bg ?? 'bg-white' }} {{ isset($bg) && $bg == 'bg-white' ? 'text-black border-white' : 'border-black text-white' }} z-10 inline-block border p-4"
-             href="/#section-5">
-             <span class="hidden lg:inline">Join the movement</span>
-             <span class="lg:hidden">Join</span>
-         </a>
-     </div>
+     @if ($show_logo ?? false)
+         <div class="flex flex-col items-end gap-1 lg:flex-row lg:gap-2">
+     @endif
+     <a class="{{ $border ?? 'border-white' }} {{ $text ?? 'text-black' }} z-10 inline-block border p-2 lg:p-4"
+         href="/map">
+         <span class="hidden lg:inline">Lost spaces map</span>
+         <span class="lg:hidden">Map</span>
+     </a>
+     <a class="{{ $border ?? 'border-white' }} {{ $text ?? 'text-black' }} z-10 inline-block border p-2 lg:p-4"
+         href="/about">
+         <span class="hidden lg:inline">About us</span>
+         <span class="lg:hidden">About</span>
+     </a>
+     <a class="{{ $bg ?? 'bg-white' }} {{ isset($bg) && $bg == 'bg-white' ? 'text-black border-white' : 'border-black text-white' }} z-10 inline-block border p-2 lg:p-4"
+         href="/#section-5">
+         <span class="hidden lg:inline">Join the movement</span>
+         <span class="lg:hidden">Join</span>
+     </a>
+     @if ($show_logo ?? false)
+ </div>
+ @endif
  </div>
